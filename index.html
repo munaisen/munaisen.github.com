@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>头像</title>
+<style>
+*{ padding:0; margin:0;}
+h2{font-family:"Microsoft YaHei"; font-size:32px; color:#666; padding:20px}
+.tx_box{ height:102px; width:102px;border:1px solid #abb7c0; border-radius:3px; margin:50px auto; box-shadow:0 0 2px #bec6cc; cursor:pointer;}
+.tx_box_inline_ys{ width:100px; height:100px;border:1px solid #fff; border-radius:3px; background:#30587c; position:relative; overflow:hidden}
+.talk_box{ width:81px; height:32px; border:1px solid #a9bac5; top:2px; left:14px; position:absolute; box-shadow:0 0 2px #5d7c96; border-radius:12px; z-index:2; background:#30587c;}
+.talk_text{ width:81px; height:32px; color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size:26px; text-align:center; line-height:32px;z-index:2; overflow:hidden}
+.talk_box_side{width:10px; height:20px;position: absolute;z-index: 1;top:15px;left:70px;bottom: 0;-webkit-transform: skew(-15deg,-40deg); border:2px solid #a9bac5;}
+.talk_box::after {content: '';position: absolute;z-index: 1; height:1px;  width:6px;background:#30587c; left:55px; margin-top:0px;box-shadow:0 0 1px #30587c;}
+.robot_box{ top:42px; left:-1px;position:absolute;-webkit-transform: rotate(33deg);}
+.robot_head,.robot_body,.robot_corners,.robot_arms{ border:3px solid #fff; background:#97c03c;}
+.robot_head{ width:44px; height:19px; border-radius:27px 27px 0 0; position:relative}
+.robot_eyes{ width:0px; height:0px; border:3px solid #fff; border-radius:3px; position:absolute; top:8px;}
+.lefe_eye{ left:8px;}
+.right_eye{ left:30px}
+.robot_corners{ width:2px; height:6px;border-radius:5px; position:absolute; top:-9px;}
+.lefe_corners{ left:7px;-webkit-transform: rotate(-30deg);}
+.right_corners{ left:30px;-webkit-transform: rotate(30deg);}
+.robot_corners_side{ width:2px; height:4px; background:#97c03c; position:relative; top:5px}
+.robot_body{ width:44px; height:44px; margin-top:-3px; color:#fff;font-family:"Microsoft YaHei"; font-size:32px; text-align:center; line-height:34px;}
+.robot_arms{ width:9px; height:30px; position:absolute; border-radius:13px;}
+.left_arm{ left:-12px; top:23px;}
+.right_arm{left:50px; top:5px;-webkit-transform: rotate(10deg);}
+
+.tx_box_inline_wz{ width:100px; height:100px;border:1px solid #fff; border-radius:3px; position:relative; overflow:hidden}
+.wz_box{ width:50px; height:50px;position:absolute; }
+.wz_box01{background: -webkit-radial-gradient(contain, #e84460,#9b074c 90%, #9e0751);border-radius:3px 0 0 0;box-shadow:0 0 2px #9e0751;}
+.wz_box02{ left:50px;background: -webkit-radial-gradient(contain, #65f649,#2d9235 90%, #2e9137);border-radius:0 3px 0 0;box-shadow:0 0 2px #2e9137;}
+.wz_box03{ top:50px;background: -webkit-radial-gradient(contain, #3a7fb5,#014e8d 90%, #005192);border-radius:0 0 0 3px;box-shadow:0 0 2px #005192;}
+.wz_box04{left:50px;top:50px;background: -webkit-radial-gradient(contain, #fffd84,#ded249 90%, #e0da60);border-radius:0 0 3px 0;box-shadow:0 0 2px #e0da60;}
+.bg{ width:100px; height:100px; border-radius:3px;box-shadow:inset 0 0 30px #000; position:absolute; top:0;}
+</style>
+</head>
+
+<body>
+<h2>头像by杨森</h2>
+<div class="tx_box tx_box_ys">
+	<div class="tx_box_inline_ys">
+    	<div class="talk_box">
+        	<div class="talk_text">Hello!</div>
+        </div>
+        <div class="talk_box_side"></div>   
+        <div class="robot_box">
+            <div class="robot_head">
+                <div class="robot_eyes lefe_eye"></div>
+                <div class="robot_eyes right_eye"></div>
+                <div class="robot_corners lefe_corners"><div class="robot_corners_side"></div></div>
+                <div class="robot_corners right_corners"><div class="robot_corners_side"></div></div>
+            </div>
+            <div class="robot_body">森</div>
+            <div class="robot_arms left_arm"></div>
+            <div class="robot_arms right_arm"></div>
+        </div>              
+    </div>   
+</div>
+<div class="tx_box tx_box_wz">
+	<div class="tx_box_inline_wz">
+    	<div class="wz_box wz_box01"></div>
+        <div class="wz_box wz_box02"></div>
+        <div class="wz_box wz_box03"></div>
+        <div class="wz_box wz_box04"></div>
+        <div class="bg"></div>
+    </div>
+    
+</div>
+</body>
+</html>
