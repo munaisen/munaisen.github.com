@@ -14,14 +14,16 @@ h2{font-family:"Microsoft YaHei"; font-size:32px; color:#666; padding:20px 20px;
 i{ font-style: normal;font-family: "Arial";font-size: 6px; color: #b7bbbe;}
 
 .box_watch{ width: 500px; height: 500px; margin: 0px auto; background: url(images/watch.jpg);position: relative}
-.watch_bg_box{width: 232px; height: 231px;background: #0e0e16;box-shadow: 0 7px 7px #020206 inset;border-radius: 116px; border: 1px solid #e6ebf1; position: relative;left: 137px; top:110px;z-index: 1;}
+.add_box{width: 232px; height: 231px;border-radius: 116px; position: relative;left: 137px; top:110px;z-index: 1;}
+.watch_bg_box{width: 232px; height: 231px;background: #0e0e16;box-shadow: 0 7px 7px #020206 inset;border-radius: 116px; border: 1px solid #e6ebf1; position: relative;left: 0px; top:0;z-index: 1;}
 .watch_bg_box_01{ width: 207px; height: 206px;border-radius: 113px;background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#181d23), to(#06090e));background:-o-gradient(linear,0% 0%, 0% 100%, from(#181d23), to(#06090e));background:-moz-gradient(linear,0% 0%, 0% 100%, from(#181d23), to(#06090e)); top: 15px; left: 12px; box-shadow: 0 -1px 1px #41444b inset, 0 -1px 1px #222324, 0 1px 1px #0b0c0e inset;position: absolute;z-index: 2;}
 .watch_bg_box_02{ width: 154px; height: 154px; border-radius: 76px;background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#151a1e), to(#0a0d14));background:-o-gradient(linear,0% 0%, 0% 100%, from(#151a1e), to(#0a0d14));background:-moz-gradient(linear,0% 0%, 0% 100%, from(#151a1e), to(#0a0d14));top: 26px; left:27px;box-shadow: 0 -1px 1px #41444b inset, 0 -1px 1px #2d2e30,0 -1px 2px #03060b,0 1px 2px #03060b, 0 -2px 1px #03060b inset;position: absolute;z-index: 3;}
 
-.watch_graduation_box{width: 234px; height: 232px;border-radius: 116px;position: relative;left: 137px; top:-122px;z-index: 5;}
+.watch_graduation_box{width: 234px; height: 232px;border-radius: 116px;position: absolute;left: 0; top:0;z-index: 5;}
 .watch_graduation{ width: 1px; height: 6px; background: #ffffff; position: absolute;box-shadow: 0 0 1px #ffffff;border-radius: 1px;}
-.watch_graduation_hour{ width: 6px; height: 6px; background: #d7dcdf;border-radius: 5px;box-shadow: 0 0 2px #d7dcdf; margin-left: -2px; z-index: 6}
-.watch_number_box{width: 234px; height: 232px;border-radius: 116px;position: relative;left: 137px; top:-366px;z-index: 7;}
+.watch_graduation_hour{ width: 6px; height: 6px; background: #d7dcdf;border-radius: 5px;box-shadow: 0 0 2px #d7dcdf; margin-left: -2px; z-index: 6;-webkit-transition: all .6s ease-in;-moz-transition: all .6s ease-in;-o-transition: all .6s ease-in;transition: all .6s ease-in;}
+
+.watch_number_box{width: 234px; height: 232px;border-radius: 116px;position:absolute;left:0; top:0;z-index: 7;}
 .watch_number{ color: #f9fafc;text-shadow: 0 0 2px #000106; position: absolute; font-size:22px; font-family: Arial;-webkit-transform: scale(1.1, 1.2); -moz-transform: scale(1.1, 1.2); -o-transform: scale(1.1, 1.2); }
 .watch_number1{ margin-left: 4px; margin-top: 2px}
 .watch_number2{ margin-left: 4px; margin-top: 2px}
@@ -49,19 +51,19 @@ i{ font-style: normal;font-family: "Arial";font-size: 6px; color: #b7bbbe;}
 .date_box{ width: 19px; height: 14px; padding: 1px;color: #010103; background: #f6f9ff;position: absolute;top:70px;left:135px;font-family: "Arial";box-shadow: 0 0 1px #f6f9ff;font-size: 14px;}
 .date_box_number{box-shadow: 0 0 3px #313133 inset; text-align: center; width: 19px;text-shadow: 0 0 1px #313133; line-height: 13px;}
 
-.pointer_box{width: 234px; height: 233px;_background: #000;box-shadow: 0 7px 7px #020206 inset;border-radius: 116px;position:absolute;left: 137px; top:110px;z-index: 10;}
+.pointer_box{width: 234px; height: 233px;border-radius: 116px;position:absolute;left: 0; top:0;z-index: 10;}
 
 .pointer_hour_box{ height:135px; width:16px;position: absolute;z-index: 20; top: 51px;left: 110px;}
 .pointer_hour_root{ width: 16px; height: 16px;border-radius:8px;top:59px;left:0px;position: absolute;background: #f0f0f2;box-shadow: 0 0px 1px #000000 inset, 0 0px 1px #979a9f;z-index: 21}
 .pointer_hour_body{ width: 8px; height: 57px; position: absolute;top:4px;left:3px;background: #f0f0f2;border-left:1px solid #8f9297;border-right:1px solid #8f9297;box-shadow: 0 0px 1px #fff inset;z-index: 22;}
 .pointer_hour_side{ width: 6px; height:7px; position: absolute;top:0px;left:4px;background: #f0f0f2;border-left:1px solid #5b5d61;border-top:1px solid #5b5d61;z-index: 23;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-o-transform: rotate(45deg);}
-.pointer_hour_luminous{ width: 6px; height: 42px; position: absolute;top:4px;left:5px; background:#fff;border-radius:6px/15px;box-shadow: 0 0px 1px #05060b inset;z-index: 24;}
+.pointer_hour_luminous{ width: 6px; height: 42px; position: absolute;top:4px;left:5px; background:#fff;border-radius:6px/15px;box-shadow: 0 0px 1px #05060b inset;z-index: 24;-webkit-transition: all .6s ease-in;-moz-transition: all .6s ease-in;-o-transition: all .6s ease-in;transition: all .6s ease-in;}
 
 .pointer_minute_box{ height:195px; width:16px;position: absolute;z-index: 30; top: 21px;left: 110px;}
 .pointer_minute_root{ width: 12px; height: 12px;border-radius:8px;top:91px;left:2px;position: absolute;background: #f0f0f2;box-shadow: 0 0px 1px #000000 inset, 0 0px 1px #979a9f;z-index: 31}
 .pointer_minute_body{ width: 6px; height: 90px; position: absolute;top:3px;left:4px;background: #f0f0f2;border-left:1px solid #8f9297;border-right:1px solid #8f9297;box-shadow: 0 0px 1px #fff inset;z-index: 32;}
 .pointer_minute_side{ width: 4px; height: 5px; position: absolute;top:0px;left:5px;background: #f0f0f2;border-left:1px solid #5b5d61;border-top:1px solid #5b5d61;z-index: 33;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-o-transform: rotate(45deg);}
-.pointer_minute_luminous{ width: 4px; height:68px; position: absolute;top:4px;left:6px; background:#fff;border-radius:5px/5px;box-shadow: 0 0px 1px #05060b inset;z-index: 34;}
+.pointer_minute_luminous{ width: 4px; height:68px; position: absolute;top:4px;left:6px; background:#fff;border-radius:5px/5px;box-shadow: 0 0px 1px #05060b inset;z-index: 34;-webkit-transition: all .6s ease-in;-moz-transition: all .6s ease-in;-o-transition: all .6s ease-in;transition: all .6s ease-in;}
 
 .pointer_seconds_box{ height:207px; width:16px;position: absolute;z-index: 40; top:15px;left: 110px;}
 .pointer_seconds_root{ width: 8px; height: 8px;border-radius:8px;top:99px;left:4px;position: absolute;background: #f0f0f2;box-shadow: 0 0px 1px #000000 inset, 0 0px 1px #979a9f;z-index: 41}
@@ -69,11 +71,16 @@ i{ font-style: normal;font-family: "Arial";font-size: 6px; color: #b7bbbe;}
 .pointer_seconds_side{ width: 4px; height: 19px; position: absolute;top:106px;left:6px;background: #f0f0f2;z-index: 43;box-shadow: 0px 1px 1px #000000, 0 -1px 1px #000000 inset;}
 .pointer_seconds_shaft{ width: 2px; height: 2px; background: #484850; position: absolute;top:102px;left:7px;border-radius:1px/1px;box-shadow: 0 0px 1px #000 inset;z-index: 44;}
 
+.luminous_box{ background: #000;opacity:0;width: 234px; height: 233px;border-radius: 116px;position:absolute;left: 0; top:0;z-index: 50;-webkit-transition: all .6s ease-in;-moz-transition: all .6s ease-in;-o-transition: all .6s ease-in;transition: all .6s ease-in;}
+.add_box:hover .luminous_box{opacity:0.4;-webkit-transition: all .6s ease-in;-moz-transition: all .6s ease-in;-o-transition: all .6s ease-in;transition: all .6s ease-in;}
+.add_box:hover .watch_graduation_hour,.add_box:hover .pointer_hour_luminous,.add_box:hover .pointer_minute_luminous{ background: #54ff00;-webkit-transition: all .6s ease-in;-moz-transition: all .6s ease-in;-o-transition: all .6s ease-in;transition: all .6s ease-in;}
+
+
 </style>
 <script type="text/javascript">
 $(document).ready(function(){
 	yuan(".watch_graduation", 115,116, 108, 110, 181);
-	yuan(".watch_number", 117,109, 89, 94, 209);
+	yuan(".watch_number", 106,109, 89, 94, 209);
 	});
 
 </script>
@@ -81,6 +88,7 @@ $(document).ready(function(){
 <body>
 <h2>css3 手表 by 杨森</h2>
 <div class="box_watch">
+	<div class="add_box">
 	<div class="watch_bg_box">
 		<div class="watch_bg_box_01">
 			<div class="watch_bg_box_02">
@@ -124,6 +132,8 @@ $(document).ready(function(){
 			<div class="pointer_seconds_root"></div>
 		</div>
 	</div>
+	<div class="luminous_box"></div>
+	</div>	
 </div>
 
 </body>
