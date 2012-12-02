@@ -60,10 +60,6 @@ function clockmove() {
 			"-o-transform": srotate
 		});
 
-	}, 1000);
-
-
-	setInterval(function() {
 		var hours = new Date().getHours();
 		var mins = new Date().getMinutes();
 		var hdegree = hours * 30 + (mins / 2);
@@ -75,10 +71,6 @@ function clockmove() {
 			"-o-transform": hrotate
 		});
 
-	}, 1000);
-
-
-	setInterval(function() {
 		var mins = new Date().getMinutes();
 		var mdegree = mins * 6;
 		var mrotate = "rotate(" + mdegree + "deg)";
@@ -89,5 +81,9 @@ function clockmove() {
 			"-o-transform": mrotate
 		});
 
+		var days= new Date().getDate();
+		$("#date_box_number").html(days);
+
 	}, 1000);
+
 }
