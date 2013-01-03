@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>电子表</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/dw_js.js"></script>
+<style type="text/css">
+	.body{ font-size: 10px;}
+	.dw_box_side{width: 480px; height: 233px; background: #111111;border-radius: 5px;margin:120px auto;box-shadow: 0 0 20px #888888 inset;}
+	.dw_box{width: 440px;height:193px; margin:0 auto; background: #111111;position: relative;top: 20px;border-radius: 5px;box-shadow: 0 0 20px #444444;}
+	.dw_box_n_box{width:83px;height: 173px;top:10px;margin-left:16px; position: relative;float: left;}
+	@-webkit-keyframes twinkling{    /*透明度由0到1*/  
+	   20%{  
+	      opacity:.2; /*透明度为0*/  
+	    }  
+	   100%{  
+	      opacity:1; /*透明度为1*/  
+	  
+	   }  
+	 }  
+	.dw_box_n_box_d{width: 12px;}
+	.dw_box_n_box_d span{ width:10px;height:14px;display: block;border-radius: 2px;top:10px;margin-top:40px;margin-left:0px;position: relative;background: #ff4444;border:1px solid #ff0000;-webkit-animation:twinkling 1s infinite ease-in-out;}
+	.dw_number{ width:59px;height: 9px;background: #ff4444;border:1px solid #ff0000;position: absolute;border-radius:0 0 5px 5px;border-left: 0;border-right: 0;}
+	.dw_number::before,.dw_number::after{content:"" ; width: 10px;height: 9px;background: #ff4444;border:1px solid #ff0000; display: block;position: absolute;-webkit-transform: skew(45deg,0deg);top:-1px;border-radius:2px 0 0 2px;}
+	.dw_number::before{left:-6px;border-right: 0;}
+	.dw_number::after{right:-6px;border-left: 0;-webkit-transform: skew(-45deg,0deg);border-radius:0px 2px 2px 0;}
+	.dw_number_top{left: 12px;}
+	.dw_number_left1{left:-24px;top:39px;-webkit-transform: rotate(-90deg);}
+	.dw_number_left2{left:-24px;top:123px;-webkit-transform: rotate(-90deg);}
+	.dw_number_right1{left:48px;top:39px;-webkit-transform: rotate(90deg);}
+	.dw_number_right2{left:48px;top:123px;-webkit-transform: rotate(90deg);}
+	.dw_number_center{left:10px;top:80px;border-radius:0; width: 63px;height:10px}
+	.dw_number_center::before,.dw_number_center::after{width: 8px;border-top:none;top:0px;}
+	.dw_number_center::before{-webkit-transform: rotate(45deg);left:-5px;}
+	.dw_number_center::after{-webkit-transform: rotate(-45deg);right:-5px;}
+	.dw_number_bottom{left:12px;top:162px;-webkit-transform: rotate(180deg);}
+	.dw_number0 .dw_number_center{display: none}
+	.dw_number1 .dw_number_top,.dw_number1 .dw_number_center,.dw_number1 .dw_number_bottom,.dw_number1 .dw_number_left1,.dw_number1 .dw_number_left2{display: none}
+	.dw_number2 .dw_number_left1,.dw_number2 .dw_number_right2{display: none}
+	.dw_number3 .dw_number_left1,.dw_number3 .dw_number_left2{display: none}
+	.dw_number4 .dw_number_top,.dw_number4 .dw_number_left2,.dw_number4 .dw_number_bottom{display: none}
+	.dw_number5 .dw_number_left2,.dw_number5 .dw_number_right1{display: none}
+	.dw_number6 .dw_number_right1{display: none}
+	.dw_number7 .dw_number_left1,.dw_number7 .dw_number_left2,.dw_number7 .dw_number_center,.dw_number7 .dw_number_bottom{display: none}
+	.dw_number8{}
+	.dw_number9 .dw_number_left2{display: none}
+</style>
+</head>
+<body class="body">
+    <div class="dw_box_side">
+    	<div class="dw_box">
+    		<div class="dw_box_n_box" id="hours_1">
+    			<div class="dw_number dw_number_top"></div>
+    			<div class="dw_number dw_number_center"></div>
+    			<div class="dw_number dw_number_bottom"></div>
+    			<div class="dw_number dw_number_left1"></div>
+    			<div class="dw_number dw_number_left2"></div>
+    			<div class="dw_number dw_number_right1"></div>
+    			<div class="dw_number dw_number_right2"></div>
+    		</div>
+    		<div class="dw_box_n_box" id="hours_2">
+    			<div class="dw_number dw_number_top"></div>
+    			<div class="dw_number dw_number_center"></div>
+    			<div class="dw_number dw_number_bottom"></div>
+    			<div class="dw_number dw_number_left1"></div>
+    			<div class="dw_number dw_number_left2"></div>
+    			<div class="dw_number dw_number_right1"></div>
+    			<div class="dw_number dw_number_right2"></div>
+    		</div>
+    		<div class="dw_box_n_box dw_box_n_box_d">
+    			<span></span><span></span>
+    		</div>
+    		<div class="dw_box_n_box" id="mins_1">
+    			<div class="dw_number dw_number_top"></div>
+    			<div class="dw_number dw_number_center"></div>
+    			<div class="dw_number dw_number_bottom"></div>
+    			<div class="dw_number dw_number_left1"></div>
+    			<div class="dw_number dw_number_left2"></div>
+    			<div class="dw_number dw_number_right1"></div>
+    			<div class="dw_number dw_number_right2"></div>
+    		</div>
+    		<div class="dw_box_n_box" id="mins_2">
+    			<div class="dw_number dw_number_top"></div>
+    			<div class="dw_number dw_number_center"></div>
+    			<div class="dw_number dw_number_bottom"></div>
+    			<div class="dw_number dw_number_left1"></div>
+    			<div class="dw_number dw_number_left2"></div>
+    			<div class="dw_number dw_number_right1"></div>
+    			<div class="dw_number dw_number_right2"></div>
+    		</div>
+    	</div>
+    </div>
+</body>
+</html>
