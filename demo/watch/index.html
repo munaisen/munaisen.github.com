@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>手表</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/w_js.js"></script>
+<style type="text/css">
+*{ padding: 0; margin: 0;}
+li{ list-style: none;}
+h2{font-family:"Microsoft YaHei"; font-size:32px; color:#666; padding:20px 20px;}
+i{ font-style: normal;font-family: "Arial";font-size: 6px; color: #b7bbbe;}
+
+.box_watch{ width: 500px; height: 500px; margin: 0px auto; background: url(images/watch.jpg);position: relative}
+.add_box{width: 232px; height: 231px;border-radius: 116px; position: relative;left: 137px; top:110px;z-index: 1;}
+.watch_bg_box{width: 232px; height: 231px;background: #0e0e16;box-shadow: 0 7px 7px #020206 inset;border-radius: 116px; border: 1px solid #e6ebf1; position: relative;left: 0px; top:0;z-index: 1;}
+.watch_bg_box_01{ width: 207px; height: 206px;border-radius: 113px;background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#181d23), to(#06090e));background:-o-gradient(linear,0% 0%, 0% 100%, from(#181d23), to(#06090e));background:-moz-gradient(linear,0% 0%, 0% 100%, from(#181d23), to(#06090e)); top: 15px; left: 12px; box-shadow: 0 -1px 1px #41444b inset, 0 -1px 1px #222324, 0 1px 1px #0b0c0e inset;position: absolute;z-index: 2;}
+.watch_bg_box_02{ width: 154px; height: 154px; border-radius: 76px;background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#151a1e), to(#0a0d14));background:-o-gradient(linear,0% 0%, 0% 100%, from(#151a1e), to(#0a0d14));background:-moz-gradient(linear,0% 0%, 0% 100%, from(#151a1e), to(#0a0d14));top: 26px; left:27px;box-shadow: 0 -1px 1px #41444b inset, 0 -1px 1px #2d2e30,0 -1px 2px #03060b,0 1px 2px #03060b, 0 -2px 1px #03060b inset;position: absolute;z-index: 3;}
+
+.watch_graduation_box{width: 234px; height: 232px;border-radius: 116px;position: absolute;left: 0; top:0;z-index: 5;}
+.watch_graduation{ width: 1px; height: 6px; background: #ffffff; position: absolute;box-shadow: 0 0 1px #ffffff;border-radius: 1px;}
+.watch_graduation_hour{ width: 6px; height: 6px; background: #d7dcdf;border-radius: 5px;box-shadow: 0 0 2px #d7dcdf; margin-left: -2px; z-index: 6;-webkit-transition: background .6s ease-in;-moz-transition: background .6s ease-in;-o-transition: background .6s ease-in;transition: background .6s ease-in;}
+
+.watch_number_box{width: 234px; height: 232px;border-radius: 116px;position:absolute;left:0; top:0;z-index: 7;}
+.watch_number{ color: #f9fafc;text-shadow: 0 0 2px #000106; position: absolute; font-size:22px; font-family: Arial;-webkit-transform: scale(1.1, 1.2); -moz-transform: scale(1.1, 1.2); -o-transform: scale(1.1, 1.2); }
+.watch_number1{ margin-left: 4px; margin-top: 2px}
+.watch_number2{ margin-left: 4px; margin-top: 2px}
+.watch_number3{ margin-top: 1px;-webkit-transform: scale(1.2, 1.3); -moz-transform: scale(1.2, 1.3); -o-transform: scale(1.2, 1.3);}
+.watch_number4{ margin-left:-2px;}
+.watch_number6{ margin-left:-2px;}
+.watch_number7{ margin-left:-2px;}
+.watch_number8{ margin-left:2px;}
+.watch_number9{ margin-left:4px;}
+.watch_number10{-webkit-transform: scale(1, 1.2); -moz-transform: scale(1, 1.2); -o-transform: scale(1.\, 1.2);}
+.watch_number11{-webkit-transform: scale(1, 1.2); -moz-transform: scale(1, 1.2); -o-transform: scale(1, 1.2);}
+.watch_number12{-webkit-transform: scale(1, 1.2); -moz-transform: scale(1, 1.2); -o-transform: scale(1, 1.2);}
+.watch_logo_box{position: absolute; left: 20px; top: 9px}
+.logo{ width: 12px; height: 12px; background: #d11e22; box-shadow: 0 0 2px #9c4945 inset;position: absolute; left: 52px; top: 0px}
+.logo_v{ width: 2px; height: 10px; background: #ffffff;box-shadow: 0 0 1px #ffffff; top: 1px; left: 5px; position: absolute;}
+.logo_h{ width: 10px; height: 2px; background: #ffffff;box-shadow: 0 0 1px #ffffff; position: absolute; top: 5px; left: 1px;}
+.logo_text{color:#fdfdfd;text-align: center; top:20px; position: absolute; left: 43px;-webkit-transform: scale(.4,.4); -moz-transform: scale(.4, .4); -o-transform: scale(.4, .4);}
+.logo_text p{ font-family: "Stencil"; font-size: 12px;-webkit-transform: scale(2.1, 2.3); -moz-transform: scale(2.1,2.3); -o-transform: scale(2.1,2.3); line-height: 10px; position: absolute; top: 26px; left: 62px;}
+.logo_text i{top: 67px; left: 49px; position: absolute; width: 80px;}
+.watch_text{font-family: "Arial";-webkit-transform: scale(.6,.8); -moz-transform: scale(.6, .8); -o-transform: scale(.6, .8); font-size: 12px; text-align: center;color: #e9eaee; position: absolute; top: 107px; left:40px;line-height: 11px;}
+.watch_text .meter{-webkit-transform: scale(.9,.8); -moz-transform: scale(.9, .8); -o-transform: scale(.9, .8);}
+.watch_bottom_text{position: absolute; width: 100px; height: 20px;-webkit-transform: scale(.6,.5); -moz-transform: scale(.5, .6); -o-transform: scale(.5, .6); top: 166px; left: 23px;}
+.watch_bottom_text i.watch_bottom_text_i1{-webkit-transform: rotate(14deg); display: block;color:#ffffff;}
+.watch_bottom_text i.watch_bottom_text_i2{-webkit-transform: rotate(-12deg);display: block;color:#ffffff;left: 72px;top:-6px;position: absolute}
+.date_box{ width: 19px; height: 14px; padding: 1px;color: #010103; background: #f6f9ff;position: absolute;top:70px;left:135px;font-family: "Arial";box-shadow: 0 0 1px #f6f9ff;font-size: 14px;}
+.date_box_number{box-shadow: 0 0 3px #313133 inset; text-align: center; width: 19px;text-shadow: 0 0 1px #313133; line-height: 13px;}
+
+.pointer_box{width: 234px; height: 233px;border-radius: 116px;position:absolute;left: 0; top:0;z-index: 10;}
+
+.pointer_hour_box{ height:135px; width:16px;position: absolute;z-index: 20; top: 51px;left: 110px;}
+.pointer_hour_root{ width: 16px; height: 16px;border-radius:8px;top:59px;left:0px;position: absolute;background: #f0f0f2;box-shadow: 0 0px 1px #000000 inset, 0 0px 1px #979a9f;z-index: 21}
+.pointer_hour_body{ width: 8px; height: 57px; position: absolute;top:4px;left:3px;background: #f0f0f2;border-left:1px solid #8f9297;border-right:1px solid #8f9297;box-shadow: 0 0px 1px #fff inset;z-index: 22;}
+.pointer_hour_side{ width: 6px; height:7px; position: absolute;top:0px;left:4px;background: #f0f0f2;border-left:1px solid #5b5d61;border-top:1px solid #5b5d61;z-index: 23;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-o-transform: rotate(45deg);}
+.pointer_hour_luminous{ width: 6px; height: 42px; position: absolute;top:4px;left:5px; background:#fff;border-radius:6px/15px;box-shadow: 0 0px 1px #05060b inset;z-index: 24;-webkit-transition: background .6s ease-in;-moz-transition: background .6s ease-in;-o-transition: background .6s ease-in;transition: background .6s ease-in;}
+
+.pointer_minute_box{ height:195px; width:16px;position: absolute;z-index: 30; top: 21px;left: 110px;}
+.pointer_minute_root{ width: 12px; height: 12px;border-radius:8px;top:91px;left:2px;position: absolute;background: #f0f0f2;box-shadow: 0 0px 1px #000000 inset, 0 0px 1px #979a9f;z-index: 31}
+.pointer_minute_body{ width: 6px; height: 90px; position: absolute;top:3px;left:4px;background: #f0f0f2;border-left:1px solid #8f9297;border-right:1px solid #8f9297;box-shadow: 0 0px 1px #fff inset;z-index: 32;}
+.pointer_minute_side{ width: 4px; height: 5px; position: absolute;top:0px;left:5px;background: #f0f0f2;border-left:1px solid #5b5d61;border-top:1px solid #5b5d61;z-index: 33;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-o-transform: rotate(45deg);}
+.pointer_minute_luminous{ width: 4px; height:68px; position: absolute;top:4px;left:6px; background:#fff;border-radius:5px/5px;box-shadow: 0 0px 1px #05060b inset;z-index: 34;-webkit-transition: background .6s ease-in;-moz-transition: background .6s ease-in;-o-transition: background .6s ease-in;transition: background .6s ease-in;}
+
+.pointer_seconds_box{ height:207px; width:16px;position: absolute;z-index: 40; top:15px;left: 110px;}
+.pointer_seconds_root{ width: 8px; height: 8px;border-radius:8px;top:99px;left:4px;position: absolute;background: #f0f0f2;box-shadow: 0 0px 1px #000000 inset, 0 0px 1px #979a9f;z-index: 41}
+.pointer_seconds_body{ width: 2px; height:100px; position: absolute;top:0px;left:7px;background: #f0f0f2;border-radius:1px/1px;z-index: 42;}
+.pointer_seconds_side{ width: 4px; height: 19px; position: absolute;top:106px;left:6px;background: #f0f0f2;z-index: 43;box-shadow: 0px 1px 1px #000000, 0 -1px 1px #000000 inset;}
+.pointer_seconds_shaft{ width: 2px; height: 2px; background: #484850; position: absolute;top:102px;left:7px;border-radius:1px/1px;box-shadow: 0 0px 1px #000 inset;z-index: 44;}
+
+.luminous_box{ background: #000;opacity:0;width: 234px; height: 233px;border-radius: 116px;position:absolute;left: 0; top:0;z-index: 50;-webkit-transition: opacity .6s ease-in;-moz-transition: opacity .6s ease-in;-o-transition: opacity .6s ease-in;transition: opacity .6s ease-in;}
+.add_box:hover .luminous_box{opacity:0.4;-webkit-transition: opacity .6s ease-in;-moz-transition: opacity .6s ease-in;-o-transition: opacity .6s ease-in;transition: opacity .6s ease-in;}
+.add_box:hover .watch_graduation_hour,.add_box:hover .pointer_hour_luminous,.add_box:hover .pointer_minute_luminous{ background: #20e925;-webkit-transition: background .6s ease-in;-moz-transition: background .6s ease-in;-o-transition: background .6s ease-in;transition: background .6s ease-in;}
+
+
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	yuan(".watch_graduation", 115,116, 108, 110, 181);
+	yuan(".watch_number", 106,109, 89, 94, 209);
+	});
+
+</script>
+</head>
+<body>
+<h2>css3 手表 by 杨森</h2>
+<div class="box_watch">
+	<div class="add_box">
+	<div class="watch_bg_box">
+		<div class="watch_bg_box_01">
+			<div class="watch_bg_box_02">
+				<div class="watch_logo_box">
+					<div class="logo"><div class="logo_v"></div><div class="logo_h"></div></div>
+				</div>
+				<div class="logo_text"><p>swiss<br />military</p><i>BY CHRONO</i></div>
+				<div class="watch_text">
+					<p>SAPPHIRE</p>
+					<p class="meter">100 METERS</p>
+				</div>
+				<div class="watch_bottom_text">
+					<i class="watch_bottom_text_i1">SWISS</i>
+					<i class="watch_bottom_text_i2">MADE</i>
+				</div>
+				<div class="date_box">
+					<div class="date_box_number" id="date_box_number">&nbsp;</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<ul class="watch_graduation_box" id="watch_graduation_box"></ul>
+	<ul class="watch_number_box" id="watch_number_box"></ul>
+	<div class="pointer_box">
+		<div class="pointer_hour_box" id="pointer_hour">
+			<div class="pointer_hour_luminous"></div>
+			<div class="pointer_hour_side"></div>
+			<div class="pointer_hour_body"></div>
+			<div class="pointer_hour_root"></div>
+		</div>
+		<div class="pointer_minute_box" id="pointer_minute">
+			<div class="pointer_minute_luminous"></div>
+			<div class="pointer_minute_side"></div>
+			<div class="pointer_minute_body"></div>
+			<div class="pointer_minute_root"></div>
+		</div>
+		<div class="pointer_seconds_box" id="pointer_seconds">
+			<div class="pointer_seconds_shaft"></div>
+			<div class="pointer_seconds_side"></div>
+			<div class="pointer_seconds_body"></div>
+			<div class="pointer_seconds_root"></div>
+		</div>
+	</div>
+	<div class="luminous_box"></div>
+	</div>	
+</div>
+
+</body>
+</html>

@@ -2,81 +2,109 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>头像</title>
-<style>
-*{ padding:0; margin:0;}
-h2{font-family:"Microsoft YaHei"; font-size:32px; color:#666; padding:20px}
-.tx_box{ height:102px; width:102px;border:1px solid #abb7c0; border-radius:3px; margin:50px auto; box-shadow:0 0 2px #bec6cc; cursor:pointer;}
-.tx_box_inline_ys{ width:100px; height:100px;border:1px solid #fff; border-radius:3px; background:#30587c; position:relative; overflow:hidden}
-.talk_box{ width:81px; height:32px; border:1px solid #a9bac5; top:2px; left:14px; position:absolute; box-shadow:0 0 2px #5d7c96; border-radius:12px; z-index:2; background:#30587c;}
-.talk_text{ width:81px; height:32px; color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size:26px; text-align:center; line-height:32px;z-index:2; overflow:hidden}
-.talk_box_side{width:10px; height:20px;position: absolute;z-index: 1;top:15px;left:70px;bottom: 0;-webkit-transform: skew(-15deg,-40deg); border:2px solid #a9bac5;}
-.talk_box::after {content: '';position: absolute;z-index: 1; height:1px;  width:6px;background:#30587c; left:55px; margin-top:0px;box-shadow:0 0 1px #30587c;}
-.robot_box{ top:42px; left:-1px;position:absolute;-webkit-transform: rotate(33deg);}
-.robot_head,.robot_body,.robot_corners,.robot_arms{ border:3px solid #fff; background:#97c03c;}
-.robot_head{ width:44px; height:19px; border-radius:27px 27px 0 0; position:relative}
-.robot_eyes{ width:0px; height:0px; border:3px solid #fff; border-radius:3px; position:absolute; top:8px;}
-.lefe_eye{ left:8px;}
-.right_eye{ left:30px}
-.robot_corners{ width:2px; height:6px;border-radius:5px; position:absolute; top:-9px;}
-.lefe_corners{ left:7px;-webkit-transform: rotate(-30deg);}
-.right_corners{ left:30px;-webkit-transform: rotate(30deg);}
-.robot_corners_side{ width:2px; height:4px; background:#97c03c; position:relative; top:5px}
-.robot_body{ width:44px; height:44px; margin-top:-3px; color:#fff;font-family:"Microsoft YaHei"; font-size:32px; text-align:center; line-height:34px;}
-.robot_arms{ width:9px; height:30px; position:absolute; border-radius:13px;}
-.left_arm{ left:-12px; top:23px;}
-.right_arm{left:50px; top:5px;-webkit-transform: rotate(10deg);}
-
-/*.tx_box_inline_ys:hover .right_arm{
-	-webkit-transition: all .2s ease-in;
-	-moz-transition: all .2s ease-in;
-	-o-transition: all .2s ease-in;
-	transition: all .2s ease-in;
-	-webkit-transform: rotate(0deg);
-}*/
-
-
-.tx_box_inline_wz{ width:100px; height:100px;border:1px solid #fff; border-radius:3px; position:relative; overflow:hidden}
-.wz_box{ width:50px; height:50px;position:absolute; }
-.wz_box01{background: -webkit-radial-gradient(contain, #e84460,#9b074c 90%, #9e0751);border-radius:3px 0 0 0;box-shadow:0 0 2px #9e0751;}
-.wz_box02{ left:50px;background: -webkit-radial-gradient(contain, #65f649,#2d9235 90%, #2e9137);border-radius:0 3px 0 0;box-shadow:0 0 2px #2e9137;}
-.wz_box03{ top:50px;background: -webkit-radial-gradient(contain, #3a7fb5,#014e8d 90%, #005192);border-radius:0 0 0 3px;box-shadow:0 0 2px #005192;}
-.wz_box04{left:50px;top:50px;background: -webkit-radial-gradient(contain, #fffd84,#ded249 90%, #e0da60);border-radius:0 0 3px 0;box-shadow:0 0 2px #e0da60;}
-.bg{ width:100px; height:100px; border-radius:3px;box-shadow:inset 0 0 30px #000; position:absolute; top:0;}
-
-</style>
+<title>个人展示页面</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/dw_js.js"></script>
+<link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
-
-<body>
-<h2>css3头像by杨森</h2>
-<div class="tx_box tx_box_ys">
-	<div class="tx_box_inline_ys">
-    	<div class="talk_box">
-        	<div class="talk_text">Hello!</div>
-        </div>
-        <div class="talk_box_side"></div>   
-        <div class="robot_box">
-            <div class="robot_head">
-                <div class="robot_eyes lefe_eye"></div>
-                <div class="robot_eyes right_eye"></div>
-                <div class="robot_corners lefe_corners"><div class="robot_corners_side"></div></div>
-                <div class="robot_corners right_corners"><div class="robot_corners_side"></div></div>
-            </div>
-            <div class="robot_body">森</div>
-            <div class="robot_arms left_arm"></div>
-            <div class="robot_arms right_arm"></div>
-        </div>              
-    </div>   
-</div>
-<div class="tx_box tx_box_wz">
-	<div class="tx_box_inline_wz">
-    	<div class="wz_box wz_box01"></div>
-        <div class="wz_box wz_box02"></div>
-        <div class="wz_box wz_box03"></div>
-        <div class="wz_box wz_box04"></div>
-        <div class="bg"></div>
+<body class="body">
+    <div class="topbar">
+        <div class="top_box"><botton class="top_btn">English</botton></div>
     </div>
-
-</div>
+    <div class="warp">
+        <div class="content">
+            <div class="color_line"></div>
+            <div class="content_box clearfix">
+                <div class="mybox"></div>
+                <div class="myinfo_box">
+                    <p class="myinfo"><b class="font_size1 font_gray1">杨 森</b> <span class="font_size3 font_gray2 margin_l10">（男 1987-11-09）</span><botton class="btn fr">给我留言</botton></p>
+                    <p class="myinfo"><span class="font_size2 font_gray1">WEB前端工程师</span><span class="font_size3 font_gray2 margin_l10">（3.0 年）</span></p>
+                    <p class="line"></p>
+                    <ul class="list_group im_group">
+                        <li class="b_blue"><b>IE7.0+</b><p>Trident内核</p></li>
+                        <li class="b_green"><b>Chrome</b><p>Webkit内核</p></li>
+                        <li class="b_yellow"><b>Firfox</b><p>Gecko内核</p></li>
+                        <li class="b_orange"><b>Opera</b><p>Presto内核</p></li>
+                    </ul>
+                    <p class="myinfo clearfix"><span class="myinfo_tag font_gray2">QQ：</span><span class="font_size2 font_gray1">226572676</span></p>
+                    <p class="myinfo clearfix"><span class="myinfo_tag font_gray2">MNS：</span><span class="font_size2 font_gray1">kiven_ys@msn.cn</span></p>
+                    <p class="myinfo clearfix"><span class="myinfo_tag font_gray2">E-mail：</span><span class="font_size2 font_gray1">jason.ys@foxmail.com</span></p>   
+                </div>
+                
+            </div>
+        </div>
+        <div class="content">
+            <div class="content_box clearfix">
+                <div class="tab_box clearfix">
+                    <ul class="tab_btn_box clearfix">
+                        <li class="tab_btn_box_item tab_btn_box_item_select" title="我的基本信息">我的基本信息</li>
+                        <li class="tab_btn_box_item" title="我的作品">我的作品</li>
+                        <li class="tab_btn_box_item" title="我的文章">我的文章</li>
+                    </ul>
+                    <div class="tab_con_box clearfix">
+                        <div class="tab_con_box_item">
+                            <ul class="time_line_box">
+                                <li>
+                                    <i class="group_item b_blue"></i>
+                                    <h2>2012/03--至今    ：上海大智慧网络技术有限公司 | 产品设计部 | WEB前端、UI工程师</h2>
+                                    <p>主要负责终端页面用div+css进行demo原型制作。使用自主开发的JS组件库进行demo搭建。项目UI交互指导。项目后期UI审查。组件功能升级等。大智慧IDE平台UI文件demo制作。UI文件的demo标准执行。</p>
+                                </li>
+                                <li>
+                                    <i class="group_item b_blue"></i>
+                                    <h2>2011/06--2012/03: 北京世华国际金融信息有限公司 | 产品设计部 | WEB前端、UI工程师</h2>
+                                    <p>主要负责终端页面用div+css进行demo原型制作。使用自主开发的JS组件库进行demo搭建。项目UI交互指导。项目后期UI审查。组件功能升级等。</p>
+                                </li>
+                                <li>
+                                    <i class="group_item b_yellow"></i>
+                                    <h2>2010/07--2011/06：合肥红之娘网络信息科技有限公司 | 技术部 | WEB前端工程师</h2>
+                                    <p>主要负责全站的网页切图工作，用div+css进行网页布局。多次完成网站改版工作。并对整体网站进行日常维护和制作会员的个性化页面。积累了丰富的div+css经验。</p>
+                                </li>
+                                <li>
+                                    <i class="group_item b_orange"></i>
+                                    <h2>2009/06--2010/06: 北京凯瑞克公司 | JAVA培训 | SCWCD证书</h2>
+                                    <p>学习了前端语言（HTML+CSS）与后端语言（JAVA）。自己深入研究了DIV+CSS高规格网页布局和CSS3&HTML5。</p>
+                                </li>
+                                <li>
+                                    <i class="group_item b_green"></i>
+                                    <h2>2007/09--2011/06: 北京科技职业学院 | 计算机应用 | 本科</h2>
+                                </li>
+                            </ul>
+                            <p class="line margin_tb20"></p>
+                            <div>
+                                <ul class="list_group mc_group clearfix">
+                                    <li class="b_blue"><p>CSS<br/>CSS3</p></li>
+                                    <li class="b_green"><p>HTML<br/>HTML5</p></li>
+                                    <li class="b_yellow"><p>JS<br/>JQUERY</p></li>
+                                    <li class="b_orange"><p class="d_t">UI / UE</p></li>
+                                </ul>
+                            </div>
+                            <p class="line margin_tb20"></p>
+                            <ul class="info_list">
+                                <li>1，精通DIV+CSS布局，能够准确的规划网页的HTML结构，熟练使用CSS3做网页特效；</li>
+                                <li>2，熟悉IE6，IE7，IE8，FireFox兼容性调试，熟练使用Photoshop等切图工具；</li>
+                                <li>3，精通W3C网页制作标准和CSS2.0规范下的网页制作，能够手写代码；</li>
+                                <li>4，熟悉JS对象，JQuery类库和Dojo框架及应用；</li>
+                                <li>5，了解PHP、JAVA等后台语言</li>
+                                <li>6，熟练使用Dreamweave等页面制作软件，能够与网页设计师和程序员配合完成动态网页的制作；</li>
+                                <li>7，熟悉网站制作的执行流程及UI交互标准与规范；</li>
+                                <li>8，具有独立完成工作的能力，较强的领悟能力，工作勤勉，讲究效率、具备较强的沟通和团队精神。</li>                                <li></li>
+                            </ul>
+                            <p class="line margin_tb20"></p>
+                            <div>
+                                <ul class="list_group tool_group clearfix">
+                                    <li class="b_blue"><p>Dreamweaver</p></li>
+                                    <li class="b_green"><p>Photoshop</p></li>
+                                    <li class="b_yellow"><p>SublimeText</p></li>
+                                    <li class="b_orange"><p>Axure</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab_con_box_item"></div>
+                        <div class="tab_con_box_item"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
